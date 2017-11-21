@@ -38,9 +38,9 @@ import com.allanbank.mongodb.builder.BatchedWrite;
 import com.allanbank.mongodb.builder.BatchedWriteMode;
 import com.allanbank.mongodb.builder.Find;
 import com.allanbank.mongodb.builder.Sort;
-import com.yahoo.ycsb.ByteIterator;
-import com.yahoo.ycsb.DB;
-import com.yahoo.ycsb.DBException;
+import com.yahoo.ycsb.iterator.ByteIterator;
+import com.yahoo.ycsb.target.DB;
+import com.yahoo.ycsb.target.DBException;
 import com.yahoo.ycsb.Status;
 
 import java.util.HashMap;

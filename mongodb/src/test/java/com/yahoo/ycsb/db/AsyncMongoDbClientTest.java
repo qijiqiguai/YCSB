@@ -16,7 +16,7 @@
  */
 package com.yahoo.ycsb.db;
 
-import com.yahoo.ycsb.DB;
+import com.yahoo.ycsb.target.DB;
 
 /**
  * AsyncMongoDbClientTest provides runs the basic workload operations.

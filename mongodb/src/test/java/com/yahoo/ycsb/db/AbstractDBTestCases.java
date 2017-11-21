@@ -24,9 +24,9 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assume.assumeNoException;
 
-import com.yahoo.ycsb.ByteArrayByteIterator;
-import com.yahoo.ycsb.ByteIterator;
-import com.yahoo.ycsb.DB;
+import com.yahoo.ycsb.iterator.ByteArrayByteIterator;
+import com.yahoo.ycsb.iterator.ByteIterator;
+import com.yahoo.ycsb.target.DB;
 import com.yahoo.ycsb.Status;
 
 import org.junit.BeforeClass;

@@ -32,9 +32,9 @@ import com.datastax.driver.core.Statement;
 import com.datastax.driver.core.querybuilder.Insert;
 import com.datastax.driver.core.querybuilder.QueryBuilder;
 import com.datastax.driver.core.querybuilder.Select;
-import com.yahoo.ycsb.ByteIterator;
+import com.yahoo.ycsb.iterator.ByteIterator;
 import com.yahoo.ycsb.Status;
-import com.yahoo.ycsb.StringByteIterator;
+import com.yahoo.ycsb.iterator.StringByteIterator;
 import com.yahoo.ycsb.measurements.Measurements;
 import com.yahoo.ycsb.workloads.CoreWorkload;
 

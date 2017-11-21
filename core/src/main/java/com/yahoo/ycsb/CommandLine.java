@@ -17,6 +17,10 @@
 
 package com.yahoo.ycsb;
 
+import com.yahoo.ycsb.iterator.ByteIterator;
+import com.yahoo.ycsb.iterator.StringByteIterator;
+import com.yahoo.ycsb.target.DB;
+import com.yahoo.ycsb.target.DBException;
 import com.yahoo.ycsb.workloads.CoreWorkload;
 
 import java.io.BufferedReader;

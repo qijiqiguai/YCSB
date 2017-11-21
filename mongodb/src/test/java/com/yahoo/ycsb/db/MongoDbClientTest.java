@@ -22,7 +22,7 @@ import java.util.Properties;
 
 import org.junit.After;
 
-import com.yahoo.ycsb.DB;
+import com.yahoo.ycsb.target.DB;
 
 /**
  * MongoDbClientTest provides runs the basic workload operations.

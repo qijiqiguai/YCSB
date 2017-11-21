@@ -14,7 +14,9 @@
  * permissions and limitations under the License. See accompanying
  * LICENSE file.
  */
-package com.yahoo.ycsb;
+package com.yahoo.ycsb.iterator;
+
+import com.yahoo.ycsb.Utils;
 
 /**
  *  A ByteIterator that generates a random sequence of bytes.

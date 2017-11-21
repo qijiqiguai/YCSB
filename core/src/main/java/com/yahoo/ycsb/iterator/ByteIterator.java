@@ -14,7 +14,7 @@
  * permissions and limitations under the License. See accompanying
  * LICENSE file.
  */
-package com.yahoo.ycsb;
+package com.yahoo.ycsb.iterator;
 
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;

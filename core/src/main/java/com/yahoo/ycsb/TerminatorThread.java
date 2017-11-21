@@ -16,6 +16,8 @@
  */
 package com.yahoo.ycsb;
 
+import com.yahoo.ycsb.workloads.Workload;
+
 import java.util.Collection;
 
 /**

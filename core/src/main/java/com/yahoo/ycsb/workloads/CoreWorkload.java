@@ -20,6 +20,10 @@ package com.yahoo.ycsb.workloads;
 import com.yahoo.ycsb.*;
 import com.yahoo.ycsb.generator.*;
 import com.yahoo.ycsb.generator.UniformLongGenerator;
+import com.yahoo.ycsb.iterator.ByteIterator;
+import com.yahoo.ycsb.iterator.RandomByteIterator;
+import com.yahoo.ycsb.iterator.StringByteIterator;
+import com.yahoo.ycsb.target.DB;
 import com.yahoo.ycsb.measurements.Measurements;
 
 import java.io.IOException;

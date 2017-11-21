@@ -15,7 +15,9 @@
  * LICENSE file.
  */
 
-package com.yahoo.ycsb;
+package com.yahoo.ycsb.workloads;
+
+import com.yahoo.ycsb.target.DB;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.Properties;

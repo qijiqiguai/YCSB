@@ -16,11 +16,11 @@
  */
 package com.yahoo.ycsb.db;
 
-import com.yahoo.ycsb.DB;
-import com.yahoo.ycsb.DBException;
-import com.yahoo.ycsb.ByteIterator;
+import com.yahoo.ycsb.target.DB;
+import com.yahoo.ycsb.target.DBException;
+import com.yahoo.ycsb.iterator.ByteIterator;
 import com.yahoo.ycsb.Status;
-import com.yahoo.ycsb.StringByteIterator;
+import com.yahoo.ycsb.iterator.StringByteIterator;
 
 import java.sql.*;
 import java.util.*;

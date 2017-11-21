@@ -33,14 +33,13 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.Vector;
 
-import com.yahoo.ycsb.ByteIterator;
+import com.yahoo.ycsb.iterator.ByteIterator;
 import com.yahoo.ycsb.Client;
-import com.yahoo.ycsb.DB;
-import com.yahoo.ycsb.NumericByteIterator;
+import com.yahoo.ycsb.target.DB;
+import com.yahoo.ycsb.iterator.NumericByteIterator;
 import com.yahoo.ycsb.Status;
-import com.yahoo.ycsb.StringByteIterator;
+import com.yahoo.ycsb.iterator.StringByteIterator;
 import com.yahoo.ycsb.Utils;
-import com.yahoo.ycsb.WorkloadException;
 import com.yahoo.ycsb.measurements.Measurements;
 
 import org.testng.annotations.Test;

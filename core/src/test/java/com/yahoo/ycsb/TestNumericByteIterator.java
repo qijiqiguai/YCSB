@@ -16,6 +16,7 @@
  */
 package com.yahoo.ycsb;
 
+import com.yahoo.ycsb.iterator.NumericByteIterator;
 import org.testng.annotations.Test;
 import static org.testng.AssertJUnit.*;
 

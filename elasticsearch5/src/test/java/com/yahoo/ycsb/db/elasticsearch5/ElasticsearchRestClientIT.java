@@ -17,7 +17,7 @@
 
 package com.yahoo.ycsb.db.elasticsearch5;
 
-import com.yahoo.ycsb.DB;
+import com.yahoo.ycsb.target.DB;
 
 public class ElasticsearchRestClientIT extends ElasticsearchIntegTestBase {
 

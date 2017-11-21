@@ -17,10 +17,9 @@
 
 package com.yahoo.ycsb.workloads;
 
-import com.yahoo.ycsb.ByteIterator;
-import com.yahoo.ycsb.DB;
-import com.yahoo.ycsb.RandomByteIterator;
-import com.yahoo.ycsb.WorkloadException;
+import com.yahoo.ycsb.iterator.ByteIterator;
+import com.yahoo.ycsb.target.DB;
+import com.yahoo.ycsb.iterator.RandomByteIterator;
 import com.yahoo.ycsb.generator.*;
 
 import java.io.BufferedReader;

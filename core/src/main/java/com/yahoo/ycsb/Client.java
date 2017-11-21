@@ -17,9 +17,15 @@
 
 package com.yahoo.ycsb;
 
+import com.yahoo.ycsb.target.DB;
 import com.yahoo.ycsb.measurements.Measurements;
 import com.yahoo.ycsb.measurements.exporter.MeasurementsExporter;
 import com.yahoo.ycsb.measurements.exporter.TextMeasurementsExporter;
+import com.yahoo.ycsb.target.DBException;
+import com.yahoo.ycsb.target.DBFactory;
+import com.yahoo.ycsb.target.UnknownDBException;
+import com.yahoo.ycsb.workloads.Workload;
+import com.yahoo.ycsb.workloads.WorkloadException;
 import org.apache.htrace.core.HTraceConfiguration;
 import org.apache.htrace.core.TraceScope;
 import org.apache.htrace.core.Tracer;

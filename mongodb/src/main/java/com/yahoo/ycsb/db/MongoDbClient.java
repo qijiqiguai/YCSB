@@ -37,10 +37,10 @@ import com.mongodb.client.model.UpdateOneModel;
 import com.mongodb.client.model.UpdateOptions;
 import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.UpdateResult;
-import com.yahoo.ycsb.ByteArrayByteIterator;
-import com.yahoo.ycsb.ByteIterator;
-import com.yahoo.ycsb.DB;
-import com.yahoo.ycsb.DBException;
+import com.yahoo.ycsb.iterator.ByteArrayByteIterator;
+import com.yahoo.ycsb.iterator.ByteIterator;
+import com.yahoo.ycsb.target.DB;
+import com.yahoo.ycsb.target.DBException;
 import com.yahoo.ycsb.Status;
 
 import org.bson.Document;

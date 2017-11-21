@@ -15,37 +15,31 @@
  * LICENSE file.
  */
 
-package com.yahoo.ycsb;
-
-import org.apache.htrace.core.Tracer;
-
-import java.util.Properties;
+package com.yahoo.ycsb.workloads;
 
 /**
- * Creates a DB layer by dynamically classloading the specified DB class.
+ * The workload tried to do something bad.
  */
-public final class DBFactory {
-  private DBFactory() {
-    // not used
+public class WorkloadException extends Exception {
+  /**
+   *
+   */
+  private static final long serialVersionUID = 8844396756042772132L;
+
+  public WorkloadException(String message) {
+    super(message);
   }
 
-  public static DB newDB(String dbname, Properties properties, final Tracer tracer) throws UnknownDBException {
-    ClassLoader classLoader = DBFactory.class.getClassLoader();
+  public WorkloadException() {
+    super();
+  }
 
-    DB ret;
+  public WorkloadException(String message, Throwable cause) {
+    super(message, cause);
+  }
 
-    try {
-      Class dbclass = classLoader.loadClass(dbname);
-
-      ret = (DB) dbclass.newInstance();
-    } catch (Exception e) {
-      e.printStackTrace();
-      return null;
-    }
-
-    ret.setProperties(properties);
-
-    return new DBWrapper(ret, tracer);
+  public WorkloadException(Throwable cause) {
+    super(cause);
   }
 
 }

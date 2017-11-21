@@ -17,7 +17,6 @@
 package com.yahoo.ycsb.workloads;
 
 import com.yahoo.ycsb.Client;
-import com.yahoo.ycsb.WorkloadException;
 import com.yahoo.ycsb.generator.NumberGenerator;
 
 import java.util.Properties;
