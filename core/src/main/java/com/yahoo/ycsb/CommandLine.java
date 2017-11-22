@@ -81,15 +81,17 @@ public final class CommandLine {
     System.out.println("Type \"help\" for command line help");
     System.out.println("Start with \"-help\" for usage info");
 
-    String table = props.getProperty(CoreWorkload.TABLENAME_PROPERTY, CoreWorkload.TABLENAME_PROPERTY_DEFAULT);
+    // get table name, if can't get, return default table
+    String table =
+        props.getProperty(CoreWorkload.TABLENAME_PROPERTY, CoreWorkload.TABLENAME_PROPERTY_DEFAULT);
 
     //create a DB
     String dbname = props.getProperty(Client.DB_PROPERTY, DEFAULT_DB);
 
     ClassLoader classLoader = CommandLine.class.getClassLoader();
 
+    // create DB instance, which is used for this test
     DB db = null;
-
     try {
       Class dbclass = classLoader.loadClass(dbname);
       db = (DB) dbclass.newInstance();

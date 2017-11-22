@@ -51,11 +51,16 @@ public class TerminatorThread extends Thread {
       return;
     }
     System.err.println("Maximum time elapsed. Requesting stop for the workload.");
+
+    // Stop workload
     workload.requestStop();
     System.err.println("Stop requested for workload. Now Joining!");
+
+    // Stop all threads
     for (Thread t : threads) {
       while (t.isAlive()) {
         try {
+          // Waits at most {@code millis} milliseconds for this thread to die
           t.join(waitTimeOutInMS);
           if (t.isAlive()) {
             System.out.println("Still waiting for thread " + t.getName() + " to complete. " +
