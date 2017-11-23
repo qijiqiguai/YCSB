@@ -24,28 +24,32 @@ import java.util.Properties;
 
 
 /**
- * One experiment scenario. One object of this type will
- * be instantiated and shared among all client threads. This class
- * should be constructed using a no-argument constructor, so we can
- * load it dynamically. Any argument-based initialization should be
- * done by init().
+ * Test related workload information, means how many work a client should do, and where to start.
+ * One object of this type will be instantiated and shared among all client threads.
+ *
+ * This class should be constructed using a no-argument constructor, so we can
+ * load it dynamically. Any argument-based initialization should be done by init().
  * 
- * If you extend this class, you should support the "insertstart" property. This
- * allows the Client to proceed from multiple clients on different machines, in case
- * the client is the bottleneck. For example, if we want to load 1 million records from
- * 2 machines, the first machine should have insertstart=0 and the second insertstart=500000. Additionally,
- * the "insertcount" property, which is interpreted by Client, can be used to tell each instance of the
- * client how many inserts to do. In the example above, both clients should have insertcount=500000.
+ * If you extend this class, you should support the "insertStart" property.
+ * This allows the Client to proceed from multiple clients on different machines, in case
+ * the client is the bottleneck.
+ *
+ * For example, if we want to load 1 million records from 2 machines,
+ * the first machine should have insertStart=0 and the second insertStart=500000.
+ * Additionally, the "insertCount" property, which is interpreted by Client,
+ * can be used to tell each instance of the client how many inserts to do.
+ * In the example above, both clients should have insertCount=500000.
  */
 public abstract class Workload {
-  public static final String INSERT_START_PROPERTY = "insertstart";
-  public static final String INSERT_COUNT_PROPERTY = "insertcount";
-  
+  public static final String INSERT_START_PROPERTY = "insertStart";
+  public static final String INSERT_COUNT_PROPERTY = "insertCount";
   public static final String INSERT_START_PROPERTY_DEFAULT = "0";
   
   private volatile AtomicBoolean stopRequested = new AtomicBoolean(false);
   
-  /** Operations available for a database. */
+  /**
+   * Operations available for a database.
+   */
   public enum Operation {
     READ,
     UPDATE,
@@ -58,8 +62,7 @@ public abstract class Workload {
    * Initialize the scenario. Create any generators and other shared objects here.
    * Called once, in the main client thread, before any operations are started.
    */
-  public void init(Properties p) throws WorkloadException {
-  }
+  public void init(Properties p) throws WorkloadException { }
 
   /**
    * Initialize any state for a particular client thread. Since the scenario object

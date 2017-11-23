@@ -72,7 +72,7 @@ GOTO gotCommand
 :noRun
 IF NOT "shell" == "%1" GOTO noShell
 SET YCSB_COMMAND=
-SET YCSB_CLASS=com.yahoo.ycsb.CommandLine
+SET YCSB_CLASS=com.yahoo.ycsb.DbOpsCommandLine
 GOTO gotCommand
 :noShell
 ECHO [ERROR] Found unknown command '%1'

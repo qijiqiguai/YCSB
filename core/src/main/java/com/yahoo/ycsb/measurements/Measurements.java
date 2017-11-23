@@ -40,8 +40,8 @@ public class Measurements {
     RAW
   }
 
-  public static final String MEASUREMENT_TYPE_PROPERTY = "measurementtype";
-  private static final String MEASUREMENT_TYPE_PROPERTY_DEFAULT = "hdrhistogram";
+  public static final String MEASUREMENT_TYPE_PROPERTY = "measurementType";
+  private static final String MEASUREMENT_TYPE_PROPERTY_DEFAULT = "hdrHistogram";
 
   public static final String MEASUREMENT_INTERVAL = "measurement.interval";
   private static final String MEASUREMENT_INTERVAL_DEFAULT = "op";
@@ -50,10 +50,10 @@ public class Measurements {
   public static final String MEASUREMENT_TRACK_JVM_PROPERTY_DEFAULT = "false";
 
   private static Measurements singleton = null;
-  private static Properties measurementproperties = null;
+  private static Properties measurementProperties = null;
 
   public static void setProperties(Properties props) {
-    measurementproperties = props;
+    measurementProperties = props;
   }
 
   /**
@@ -61,7 +61,7 @@ public class Measurements {
    */
   public static synchronized Measurements getMeasurements() {
     if (singleton == null) {
-      singleton = new Measurements(measurementproperties);
+      singleton = new Measurements(measurementProperties);
     }
     return singleton;
   }
@@ -86,13 +86,13 @@ public class Measurements {
     case "histogram":
       measurementType = MeasurementType.HISTOGRAM;
       break;
-    case "hdrhistogram":
+    case "hdrHistogram":
       measurementType = MeasurementType.HDRHISTOGRAM;
       break;
-    case "hdrhistogram+histogram":
+    case "hdrHistogram+histogram":
       measurementType = MeasurementType.HDRHISTOGRAM_AND_HISTOGRAM;
       break;
-    case "hdrhistogram+raw":
+    case "hdrHistogram+raw":
       measurementType = MeasurementType.HDRHISTOGRAM_AND_RAW;
       break;
     case "timeseries":
@@ -157,6 +157,7 @@ public class Measurements {
   }
 
   private final ThreadLocal<StartTimeHolder> tlIntendedStartTime = new ThreadLocal<Measurements.StartTimeHolder>() {
+    @Override
     protected StartTimeHolder initialValue() {
       return new StartTimeHolder();
     }

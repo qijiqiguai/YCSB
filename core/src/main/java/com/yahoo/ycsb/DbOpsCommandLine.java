@@ -31,9 +31,11 @@ import java.util.*;
 
 /**
  * A simple command line client to a database, using the appropriate com.yahoo.ycsb.DB implementation.
+ *
+ * only for DB operation
  */
-public final class CommandLine {
-  private CommandLine() {
+public final class DbOpsCommandLine {
+  private DbOpsCommandLine() {
     //not used
   }
 
@@ -41,7 +43,7 @@ public final class CommandLine {
 
   public static void usageMessage() {
     System.out.println("YCSB Command Line Client");
-    System.out.println("Usage: java com.yahoo.ycsb.CommandLine [options]");
+    System.out.println("Usage: java com.yahoo.ycsb.DbOpsCommandLine [options]");
     System.out.println("Options:");
     System.out.println("  -P filename: Specify a property file");
     System.out.println("  -p name=value: Specify a property value");
@@ -88,7 +90,7 @@ public final class CommandLine {
     //create a DB
     String dbname = props.getProperty(Client.DB_PROPERTY, DEFAULT_DB);
 
-    ClassLoader classLoader = CommandLine.class.getClassLoader();
+    ClassLoader classLoader = DbOpsCommandLine.class.getClassLoader();
 
     // create DB instance, which is used for this test
     DB db = null;
@@ -110,15 +112,13 @@ public final class CommandLine {
 
     System.out.println("Connected.");
 
-    //main loop
+    //main loop wait for command in console
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
     for (;;) {
       //get user input
       System.out.print("> ");
 
       String input = null;
-
       try {
         input = br.readLine();
       } catch (IOException e) {
